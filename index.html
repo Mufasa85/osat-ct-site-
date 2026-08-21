@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAT UPPER VIEW — Matériel Électrique & Logiciel POS</title>
+<meta name="description" content="SAT UPPER VIEW : vente de matériel électrique, électronique, informatique et de sécurité, et logiciel de caisse POS pour boutiques, pharmacies, restaurants et hôtels.">
+<link rel="icon" href="assets/logo-transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ===== PAGE LOADER ===== -->
+<div class="page-loader" id="pageLoader">
+  <div class="loader-plug">
+    <svg viewBox="0 0 100 100" width="70" height="70">
+      <circle cx="50" cy="50" r="42" fill="none" stroke="#2a2a2a" stroke-width="4"/>
+      <circle class="loader-ring" cx="50" cy="50" r="42" fill="none" stroke="#E30613" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <span class="loader-text">SAT <span>UPPER VIEW</span></span>
+</div>
+
+<!-- ===== SCROLL PROGRESS BAR ===== -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#accueil" class="logo" aria-label="SAT UPPER VIEW - Accueil">
+      <img src="assets/logo-transparent.png" alt="SAT UPPER VIEW" width="46" height="46">
+      <span class="logo-text">SAT <em>UPPER VIEW</em></span>
+    </a>
+
+    <nav class="nav" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+        <li><a href="#produits" class="nav-link">Produits</a></li>
+        <li><a href="#pos" class="nav-link">Logiciel POS</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#apropos" class="nav-link">À propos</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Panier">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a href="#produits" class="btn btn-primary btn-ripple">Commander</a>
+      <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== MOBILE MENU OVERLAY ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#accueil" class="mobile-link">Accueil</a></li>
+    <li><a href="#produits" class="mobile-link">Produits</a></li>
+    <li><a href="#pos" class="mobile-link">Logiciel POS</a></li>
+    <li><a href="#services" class="mobile-link">Services</a></li>
+    <li><a href="#apropos" class="mobile-link">À propos</a></li>
+    <li><a href="#contact" class="mobile-link">Contact</a></li>
+  </ul>
+  <a href="#produits" class="btn btn-primary btn-ripple mobile-cta">Commander</a>
+</div>
+
+<main>
+<!-- ===== HERO ===== -->
+<section class="hero" id="accueil">
+  <div class="hero-bg">
+    <div class="hero-shape shape-1"></div>
+    <div class="hero-shape shape-2"></div>
+    <div class="hero-shape shape-3"></div>
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    <div class="circuit-lines" id="circuitLines"></div>
+  </div>
+
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <span class="eyebrow reveal-up">Électricité · Informatique · Sécurité · Logiciel POS</span>
+      <h1 class="hero-title reveal-up">
+        Votre partenaire en <span class="text-gradient">solutions électriques</span> et logiciels de gestion.
+      </h1>
+      <p class="hero-text reveal-up">
+        SAT UPPER VIEW équipe votre entreprise en matériel électrique, électronique, informatique et de sécurité,
+        et déploie <span class="typing-effect" id="typingText"></span> pour piloter vos ventes au quotidien.
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#produits" class="btn btn-primary btn-ripple btn-lg">Commander un produit</a>
+        <a href="#pos" class="btn btn-outline btn-ripple btn-lg">Découvrir le logiciel POS</a>
+      </div>
+      <div class="hero-trust reveal-up">
+        <div class="trust-item"><strong data-count="500">0</strong><span>Clients équipés</span></div>
+        <div class="trust-item"><strong data-count="12">0</strong><span>Ans d'expérience</span></div>
+        <div class="trust-item"><strong data-count="98">0</strong><span>% Satisfaction</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal-right">
+      <div class="device-stack">
+        <div class="device device-laptop floating">
+          <div class="device-screen">
+            <div class="mock-nav"><span></span><span></span><span></span></div>
+            <div class="mock-chart">
+              <div class="mock-bar" style="--h:40%"></div>
+              <div class="mock-bar" style="--h:65%"></div>
+              <div class="mock-bar" style="--h:50%"></div>
+              <div class="mock-bar" style="--h:85%"></div>
+              <div class="mock-bar" style="--h:60%"></div>
+            </div>
+            <div class="mock-rows">
+              <div class="mock-row"></div>
+              <div class="mock-row"></div>
+              <div class="mock-row"></div>
+            </div>
+          </div>
+          <div class="device-base"></div>
+        </div>
+        <div class="device device-tablet floating floating-delay-1">
+          <div class="device-screen tablet-screen">
+            <div class="mock-icon-grid">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="device device-phone floating floating-delay-2">
+          <div class="device-screen phone-screen">
+            <div class="mock-notch"></div>
+            <div class="mock-total">1,240,000 <small>FC</small></div>
+            <div class="mock-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#services" class="scroll-cue" aria-label="Défiler">
+    <span></span>
+  </a>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="eyebrow">Nos activités</span>
+      <h2>Tout ce qu'il faut pour équiper et gérer votre commerce</h2>
+      <p class="section-sub">Du matériel à l'installation, jusqu'à la gestion quotidienne de vos ventes.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card reveal-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+        </div>
+        <h3>Vente de matériel électrique</h3>
+        <p>Câbles, disjoncteurs, tableaux, luminaires et composants pour tous vos chantiers.</p>
+      </article>
+
+      <article class="service-card reveal-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6"/></svg>
+        </div>
+        <h3>Installation électrique</h3>
+        <p>Études, câblage et mise en service par des techniciens certifiés.</p>
+      </article>
+
+      <article class="service-card reveal-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-4v12l-6-4"/></svg>
+        </div>
+        <h3>Caméras de surveillance</h3>
+        <p>Systèmes de vidéosurveillance HD, à distance, pour foyers et entreprises.</p>
+      </article>
+
+      <article class="service-card reveal-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        </div>
+        <h3>Réseau informatique</h3>
+        <p>Câblage réseau, Wi-Fi professionnel et infrastructure serveurs.</p>
+      </article>
+
+      <article class="service-card reveal-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h5M6 11h3"/></svg>
+        </div>
+        <h3>Logiciel POS</h3>
+        <p>Caisse, stock et facturation pour boutiques, pharmacies et restaurants.</p>
+      </article>
+
+      <article class="service-card reveal-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <h3>Maintenance</h3>
+        <p>Contrats d'entretien préventif et interventions rapides sur site.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUITS ===== -->
+<section class="section section-alt" id="produits">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="eyebrow">Catalogue</span>
+      <h2>Nos produits</h2>
+      <p class="section-sub">Matériel électrique, électronique, informatique et de sécurité, sélectionné pour sa fiabilité.</p>
+    </div>
+
+    <div class="catalog-toolbar reveal-up">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="productSearch" placeholder="Rechercher un produit…">
+      </div>
+      <div class="filter-chips" id="filterChips">
+        <button class="chip active" data-filter="all">Tout</button>
+        <button class="chip" data-filter="electrique">Électrique</button>
+        <button class="chip" data-filter="informatique">Informatique</button>
+        <button class="chip" data-filter="securite">Sécurité</button>
+        <button class="chip" data-filter="pos">POS</button>
+      </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- ===== POS ===== -->
+<section class="section pos-section" id="pos">
+  <div class="pos-bg-shape"></div>
+  <div class="container pos-inner">
+    <div class="pos-visual reveal-left">
+      <div class="pos-device-frame">
+        <div class="pos-laptop floating">
+          <div class="pos-screen">
+            <div class="pos-topbar"><span></span><span></span><span></span></div>
+            <div class="pos-body">
+              <div class="pos-side">
+                <div class="pos-side-item active"></div>
+                <div class="pos-side-item"></div>
+                <div class="pos-side-item"></div>
+                <div class="pos-side-item"></div>
+              </div>
+              <div class="pos-main">
+                <div class="pos-stat-cards">
+                  <div class="pos-stat"><span class="pos-stat-num" data-count="482">0</span><small>Ventes du jour</small></div>
+                  <div class="pos-stat"><span class="pos-stat-num" data-count="97">0</span><small>Articles en stock</small></div>
+                </div>
+                <div class="pos-graph">
+                  <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                    <polyline points="0,50 30,35 60,42 90,20 120,28 150,10 180,18 200,5" fill="none" stroke="#E30613" stroke-width="3"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pos-phone floating floating-delay-1">
+          <div class="pos-phone-screen">
+            <div class="pos-receipt-line"></div>
+            <div class="pos-receipt-line short"></div>
+            <div class="pos-receipt-line"></div>
+            <div class="pos-receipt-total">Total: 45,000 FC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pos-content reveal-right">
+      <span class="eyebrow">Logiciel de caisse</span>
+      <h2>Le logiciel de caisse qui simplifie votre gestion.</h2>
+      <p class="section-sub left">Pensé pour les boutiques, pharmacies, restaurants, hôtels, quincailleries et supermarchés.</p>
+
+      <div class="pos-features">
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg><span>Gestion des ventes</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5"/><path d="M16 19h6M19 16v6"/></svg><span>Gestion du stock</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg><span>Facturation</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7V5a1 1 0 0 1 1-1h2M3 17v2a1 1 0 0 0 1 1h2M21 7V5a1 1 0 0 0-1-1h-2M21 17v2a1 1 0 0 1-1 1h-2M7 8v8M11 8v8M15 8v8M17 8v8"/></svg><span>Scanner code-barres</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg><span>Rapports</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>Statistiques</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17" cy="8" r="2.3"/></svg><span>Clients</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4M4 10v10h16V10"/></svg><span>Fournisseurs</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>Utilisateurs</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z"/></svg><span>Sécurité</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M6 9l6 6 6-6"/><path d="M4 21h16"/></svg><span>Sauvegarde</span></div>
+        <div class="pos-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="9" width="16" height="8" rx="1"/><path d="M7 9V4h10v5M7 21h10v-4H7Z"/></svg><span>Impression ticket</span></div>
+      </div>
+
+      <div class="pos-actions">
+        <a href="#contact" class="btn btn-primary btn-ripple btn-lg">Commander le logiciel</a>
+        <a href="#contact" class="btn btn-ghost btn-ripple btn-lg">Demander une démonstration</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMMENT ÇA MARCHE ===== -->
+<section class="section" id="comment">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="eyebrow">Processus</span>
+      <h2>Comment ça marche</h2>
+      <p class="section-sub">De la licence à l'accompagnement, en six étapes claires.</p>
+    </div>
+
+    <div class="timeline" id="timeline">
+      <div class="timeline-track"><div class="timeline-progress" id="timelineProgress"></div></div>
+      <div class="timeline-step reveal-up"><span class="step-num">1</span><h4>Choisissez votre licence</h4></div>
+      <div class="timeline-step reveal-up"><span class="step-num">2</span><h4>Passez commande</h4></div>
+      <div class="timeline-step reveal-up"><span class="step-num">3</span><h4>Nous vous contactons</h4></div>
+      <div class="timeline-step reveal-up"><span class="step-num">4</span><h4>Installation</h4></div>
+      <div class="timeline-step reveal-up"><span class="step-num">5</span><h4>Formation</h4></div>
+      <div class="timeline-step reveal-up"><span class="step-num">6</span><h4>Support</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POURQUOI NOUS CHOISIR ===== -->
+<section class="section section-dark" id="apropos">
+  <div class="container">
+    <div class="section-head reveal-up light">
+      <span class="eyebrow">Pourquoi nous choisir</span>
+      <h2>Une entreprise pensée pour durer</h2>
+    </div>
+
+    <div class="why-grid">
+      <article class="why-card reveal-up">
+        <span class="why-num">01</span>
+        <h3>Qualité</h3>
+        <p>Des équipements sélectionnés auprès de fournisseurs reconnus, testés avant livraison.</p>
+      </article>
+      <article class="why-card reveal-up">
+        <span class="why-num">02</span>
+        <h3>Garantie</h3>
+        <p>Chaque produit et chaque installation est couvert par une garantie claire.</p>
+      </article>
+      <article class="why-card reveal-up">
+        <span class="why-num">03</span>
+        <h3>Support</h3>
+        <p>Une équipe disponible pour vous accompagner avant, pendant et après l'installation.</p>
+      </article>
+      <article class="why-card reveal-up">
+        <span class="why-num">04</span>
+        <h3>Innovation</h3>
+        <p>Nous intégrons en continu les meilleures technologies électriques et logicielles.</p>
+      </article>
+    </div>
+
+    <!-- STATISTIQUES -->
+    <div class="stats-grid">
+      <div class="stat-item reveal-up">
+        <span class="stat-num" data-count="850">0</span><span class="stat-suffix">+</span>
+        <p>Clients</p>
+      </div>
+      <div class="stat-item reveal-up">
+        <span class="stat-num" data-count="1200">0</span><span class="stat-suffix">+</span>
+        <p>Produits</p>
+      </div>
+      <div class="stat-item reveal-up">
+        <span class="stat-num" data-count="430">0</span><span class="stat-suffix">+</span>
+        <p>Installations</p>
+      </div>
+      <div class="stat-item reveal-up">
+        <span class="stat-num" data-count="12">0</span>
+        <p>Années d'expérience</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERIE ===== -->
+<section class="section" id="galerie">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="eyebrow">Réalisations</span>
+      <h2>Galerie</h2>
+      <p class="section-sub">Un aperçu de nos installations et déploiements récents.</p>
+    </div>
+    <div class="masonry" id="masonryGallery"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- ===== TÉMOIGNAGES ===== -->
+<section class="section section-alt" id="temoignages">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="eyebrow">Témoignages</span>
+      <h2>Ils nous font confiance</h2>
+    </div>
+
+    <div class="testimonial-slider" id="testimonialSlider">
+      <div class="testimonial-track" id="testimonialTrack"><!-- injected by JS --></div>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container container-narrow">
+    <div class="section-head reveal-up">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>FAQ</h2>
+    </div>
+    <div class="accordion" id="accordion"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="eyebrow">Contact</span>
+      <h2>Parlons de votre projet</h2>
+      <p class="section-sub">Devis, commande ou démonstration : notre équipe vous répond rapidement.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <a href="tel:+243000000000" class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg></div>
+          <div><span>Téléphone</span><strong>+243 000 000 000</strong></div>
+        </a>
+        <a href="https://wa.me/243000000000" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 20l1-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg></div>
+          <div><span>WhatsApp</span><strong>+243 000 000 000</strong></div>
+        </a>
+        <a href="mailto:contact@satupperview.com" class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
+          <div><span>Email</span><strong>contact@satupperview.com</strong></div>
+        </a>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><span>Adresse</span><strong>Kinshasa, RDC</strong></div>
+        </div>
+
+        <div class="map-embed">
+          <iframe title="Localisation SAT UPPER VIEW" src="https://maps.google.com/maps?q=Kinshasa&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <form class="contact-form reveal-right" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Nom complet</label>
+            <input type="text" id="fname" name="fname" required>
+            <span class="form-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="fphone">Téléphone</label>
+            <input type="tel" id="fphone" name="fphone" required>
+            <span class="form-error"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="femail">Email</label>
+          <input type="email" id="femail" name="femail" required>
+          <span class="form-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="fsubject">Sujet</label>
+          <select id="fsubject" name="fsubject">
+            <option>Commande de matériel</option>
+            <option>Logiciel POS</option>
+            <option>Démonstration</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fmessage">Message</label>
+          <textarea id="fmessage" name="fmessage" rows="4" required></textarea>
+          <span class="form-error"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-ripple btn-lg btn-block">Envoyer le message</button>
+        <p class="form-success" id="formSuccess">Message envoyé ! Notre équipe vous contactera très vite.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <a href="#accueil" class="logo">
+        <img src="assets/logo-transparent.png" alt="SAT UPPER VIEW" width="42" height="42">
+        <span class="logo-text light">SAT <em>UPPER VIEW</em></span>
+      </a>
+      <p>Matériel électrique, électronique, informatique et de sécurité — et logiciel POS pour une gestion simplifiée.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.4H3.3V21h3.6V8.4ZM5.1 3a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2ZM21 21v-7c0-3.4-1.8-5-4.3-5-2 0-2.8 1.1-3.3 1.9V8.4H10V21h3.4v-6.4c0-1.7 1-2.6 2.2-2.6 1.2 0 2 .9 2 2.6V21H21Z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Matériel électrique</a></li>
+        <li><a href="#services">Installation</a></li>
+        <li><a href="#services">Vidéosurveillance</a></li>
+        <li><a href="#services">Réseau informatique</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Produits</h4>
+      <ul>
+        <li><a href="#produits">Électrique</a></li>
+        <li><a href="#produits">Informatique</a></li>
+        <li><a href="#produits">Sécurité</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Logiciel POS</h4>
+      <ul>
+        <li><a href="#pos">Fonctionnalités</a></li>
+        <li><a href="#contact">Commander</a></li>
+        <li><a href="#contact">Démonstration</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Recevez nos offres et nouveautés.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Votre email" required>
+        <button type="submit" aria-label="S'abonner">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> SAT UPPER VIEW. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Précédent">&#10094;</button>
+  <img src="" alt="" id="lightboxImg">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Suivant">&#10095;</button>
+</div>
+
+<!-- ===== CART DRAWER ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Votre panier</h3>
+    <button id="cartClose" aria-label="Fermer">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">0 FC</strong></div>
+    <a href="#contact" class="btn btn-primary btn-ripple btn-block" id="cartCheckout">Passer commande</a>
+  </div>
+</aside>
+
+<script src="js/main.js"></script>
+</body>
+</html>
